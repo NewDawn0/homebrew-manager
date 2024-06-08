@@ -12,6 +12,9 @@
           config.allowUnfree = true;
         };
     in {
+      overlays.default = (final: prev: {
+        homebrew-manager = self.packages.${prev.system}.default;
+      });
       packages = eachSystem (system:
         let pkgs = mkPkgs system;
         in {
