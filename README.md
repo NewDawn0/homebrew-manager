@@ -21,8 +21,6 @@ nix profile install .
        homebrew-manager = {
          url = "github:NewDawn0/homebrew-manager";
          inputs.nixpkgs.follows = "nixpkgs";
-         # Optional: If you use nix-systems
-         inputs.nix-systems.follows = "nix-systems";
        };
      };
    }
